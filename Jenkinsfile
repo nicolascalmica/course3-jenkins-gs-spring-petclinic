@@ -6,11 +6,12 @@ pipeline {
     agent any
     
     stages {
-        stage("checkout") {
-            steps {
-                git branch: 'main', url: 'https://github.com/nicolascalmica/course3-jenkins-gs-spring-petclinic.git' 
-            }
-        }
+        // We don't need this stage because we are using the default one
+        // stage("checkout") {
+        //     steps {
+        //         git branch: 'main', url: 'https://github.com/nicolascalmica/course3-jenkins-gs-spring-petclinic.git' 
+        //     }
+        // }
         
         stage("build") {
             steps{
