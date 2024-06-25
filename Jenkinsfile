@@ -34,7 +34,7 @@ pipeline {
         always{
             emailext body: "${env.BUILD_URL}\n${currentBuild.absoluteUrl}", 
                 recipientProviders: [developers()], 
-                subject: "${env.JOB_NAME} is ${currentBuild.currentResult}",
+                subject: "${env.JOB_NAME}(${BUILD_NUMBER}) is ${currentBuild.currentResult}",
                 to: 'nicolas@calmi.it'
         }
     }    
